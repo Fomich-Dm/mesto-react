@@ -6,7 +6,7 @@ const Card = ({card, onCardClick}) => {
 
     return(
         <div className='cards__item'>
-            <img className="cards__image" alt="Фото загружно места" src={card.link} onClick={handleClick}/>
+            <img className="cards__image" alt={card.name} src={card.link} onClick={handleClick}/>
             <button className="cards__delete" type="button" aria-label="удалить место"/>
             <div className="cards__info">
               <h2 className="cards__name">{card.name}</h2>
