@@ -1,17 +1,15 @@
 import React from "react";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import PopupWithForm from "./PopupWithForm";
 
 const AddPlacePopup = ({isOpen, onClose, onAddPlace}) => {
 
-    const currentUser = React.useContext(CurrentUserContext);
     const nameRef = React.useRef()
     const placeRef = React.useRef()
 
     React.useEffect(() => {
         nameRef.current.value = '';
         placeRef.current.value = '';
-    }, [currentUser])
+    }, [isOpen])
 
 
     function handleSubmit(e) {

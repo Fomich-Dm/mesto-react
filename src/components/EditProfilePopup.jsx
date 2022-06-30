@@ -35,9 +35,9 @@ const EditProfilePopup = ({isOpen, onClose, onUpdateUser}) => {
 
     return (
     <PopupWithForm className="edit" title="Редактировать профиль" isOpen={isOpen} onClose={onClose} onSubmit={handleSubmit} buttonText='Сохранить'>
-        <input className="popup__input popup__input_type_name" value={name} onChange={heandleChangeName} id="name-profile" type="text" name="name" placeholder="Ваше имя" required />
+        <input className="popup__input popup__input_type_name" value={name || ""} onChange={heandleChangeName} id="name-profile" type="text" name="name" placeholder="Ваше имя" required />
         <span className="name-profile-error popup__input-error"></span>
-        <input className="popup__input popup__input_type_about" value={description} onChange={heandleChangeDescription} id="name-profession" type="text" name="about"  placeholder="Ваша профессия"  required />
+        <input className="popup__input popup__input_type_about" value={description || ""} onChange={heandleChangeDescription} id="name-profession" type="text" name="about"  placeholder="Ваша профессия"  required />
         <span className="name-profession-error popup__input-error"></span>
     </PopupWithForm>
     )
